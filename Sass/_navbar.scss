@@ -1,0 +1,188 @@
+// * {
+//     outline: 1px solid yellow;
+// }
+@mixin mobile{
+    @media (max-width: 660.1px){
+        @content;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 999;
+    height: 9vh;
+    padding-inline: 20px;
+    ul {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        li {
+            margin: 0 10px;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+} 
+.home, .about, .createShop, .viewShops {
+    margin-top: 10vh;
+    padding: 20px 30px;
+}
+
+//Home
+.home {
+    .cta {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        button {
+            background-color: transparent;
+            color: #eeeeee;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+    }
+    .profile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+//Create Shop
+.createShop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    h1 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: start;
+    }
+    form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #929292;
+            input, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
+
+//View Shops
+.viewShops {
+    h1 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .shop-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .shop-item {
+            position: relative;
+            // background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px); /* Adjust width as needed for your layout */
+            margin: 0;
+            overflow: hidden;
+            @include mobile {
+                width: 100%;
+            }
+            .shop-image {
+                width: 100%;
+                height: 360px;
+                object-fit: cover;
+                object-position: center;
+                .text-container {
+                    position: absolute;
+                    bottom: 3%;
+                    left: 3%;
+                    width: calc(100% - 6.5%);
+                    margin-inline: auto;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    color: #000;
+                    border-radius: 10px;
+                    h2 {
+                        font-size: 1.2rem;
+                        margin: 0 0 10px;
+                        font-weight: bold;
+                    }
+                    p {
+                        font-size: 1rem;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Root- Sign in
+.cl-signIn-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .cl-card {
+        margin-top: 110px;
+    }
+}

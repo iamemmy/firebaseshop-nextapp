@@ -1,0 +1,179 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 999;
+  height: 9vh;
+  padding-inline: 20px;
+}
+nav ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.home, .about, .createShop, .viewShops {
+  margin-top: 10vh;
+  padding: 20px 30px;
+}
+
+.home .cta {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.home .cta button {
+  background-color: transparent;
+  color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.home .profile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.createShop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.createShop h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: start;
+}
+.createShop form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.createShop form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #929292;
+}
+.createShop form label input, .createShop form label textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.createShop form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.createShop form button:hover {
+  background-color: #0056b3;
+}
+
+.viewShops h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.viewShops .shop-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 660.1px) {
+  .viewShops .shop-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.viewShops .shop-list .shop-item {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px); /* Adjust width as needed for your layout */
+  margin: 0;
+  overflow: hidden;
+}
+@media (max-width: 660.1px) {
+  .viewShops .shop-list .shop-item {
+    width: 100%;
+  }
+}
+.viewShops .shop-list .shop-item .shop-image {
+  width: 100%;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.viewShops .shop-list .shop-item .shop-image .text-container {
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  width: 93.5%;
+  margin-inline: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  border-radius: 10px;
+}
+.viewShops .shop-list .shop-item .shop-image .text-container h2 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+.viewShops .shop-list .shop-item .shop-image .text-container p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cl-signIn-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cl-signIn-root .cl-card {
+  margin-top: 110px;
+}/*# sourceMappingURL=main.css.map */
